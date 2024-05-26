@@ -1,3 +1,188 @@
-h1{
+/* h1{
   color:blue;
+} */
+
+/* Selectores Pagina de Inicio*/
+/* General: todos los elementos dentro del html */
+*{
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: black;
+  background-color: #f0f0f0;
+  margin-top: 150px; /* Igual a la altura del header */
+}
+
+main {
+  padding-bottom: 50px;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Etiquetas */
+p {
+  color: black;
+}
+
+header {
+  padding: 20px 0;
+  position: fixed;
+  height: 60px; /* Altura fija del header */
+  padding-bottom: 80px; 
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: white;
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .logo {
+  max-width: 275px;
+  height: auto;
+  /* width: 60%; */
+}
+
+/* Estilos generales para los links del nav */
+header .container nav a {
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  margin: 0 15px;
+  align-content: center;
+  position: relative; /* Necesario para el border-bottom */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+
+/* Estilos para los links cuando se pasa el ratón por encima */
+header .container nav a:hover {
+  color: #b47f31;
+  text-decoration: none;
+  box-shadow: 0 3px 0 #b47f31; /* Cambia el color, el grosor y la posición del subrayado */
+}
+
+/* Estilos para el link activo */
+header .container nav a.active {
+  color: #b47f31;
+  text-decoration: none;
+  border-bottom: 3px solid #b47f31; /* Cambia el grosor y el color del subrayado */
+  padding-bottom: 3px; /* Ajusta el espacio entre el texto y el subrayado */
+  font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+  background-color: white;
+  color: white;
+  padding-top: 40px;
+}
+
+footer .barra-footer {
+  background-color: #b47f31;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer .logo-horizontal-footer {
+  width: 100%;
+}
+
+
+footer .logo-ues-footer {
+  display: block;
+  margin-left: auto;               /* Empuja la imagen hacia la derecha */
+  width: 20%;
+}
+
+/* Clases */
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  justify-content: space-between; /* Distribuye las columnas con espacio entre ellas */
+  align-items: center;            /* Centra verticalmente las columnas */
+}
+
+.columna {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.columna-50 {
+  flex: 0 0 50%;                /* Asegura que las columnas ocupen el 50% del ancho del contenedor */
+  display: flex;
+  align-items: center;          /* Centra verticalmente el contenido de las columnas */
+  padding-bottom: 40px;
+}
+
+/* Por id */
+
+
+
+/* Por atributo */
+
+/* Article */
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 420px;
+  margin: auto;
+}
+
+img {
+  max-width: 420px;
+  max-height: 350px;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+/* Selectores Pagina de Quiénes somos */
+
+
+/* Selectores Pagina de Servicios */
+
+
+/* Selectores Pagina de Nuestros clientes */
+
+
+/* Selectores Pagina de Nuestro equipo */
+
+
+/* Selectores Pagina de Contacto */
