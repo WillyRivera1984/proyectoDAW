@@ -2,19 +2,67 @@
 <html>
 
 <head>
-  <!-- Deja el contenido estático necesario en el head, si lo hay -->
+  <style>
+    .imagen img {
+      max-width: 100%; /* Para asegurar que la imagen no sea más ancha que su contenedor */
+      height: auto; /* Para mantener la proporción de aspecto de la imagen */
+    }
+  </style>
 </head>
 
 <body>
   <header id="header">
-    <!-- Con el uso de JavaScript, el contenido de este header se carga desde un archivo externo -->
+    <!-- Con el uso de JavaScript, el contenido de este header se carga 
+    desde un archivo externo (header.html) -->
   </header>
-  
+
+  <main>
+    <section>
+      <h2>Nuestra Historia</h2>
+      <p>Somos un estudio de arquitectura y desarrollo urbano fundado en 2005 por ingenieros y arquitectos. Desde nuestros inicios, hemos trabajado en una amplia variedad de proyectos, desde edificios residenciales y comerciales hasta espacios públicos y rehabilitación de áreas urbanas.</p>
+    </section>
+
+    <!-- Galería de imágenes -->
+    <section class="galeria">
+      <div class="imagen">
+        <img src="images/imagenes_QuienesSomos/danist-soh-dqXiw7nCb9Q-unsplash.jpg" alt="Vista aérea de un complejo urbano moderno">
+      </div>
+      <div class="imagen">
+        <img src="images/imagenes_QuienesSomos/joel-filipe-6pq-BnMce1E-unsplash.jpg" alt="Edificio contemporáneo iluminado por la noche">
+      </div>
+      <div class="imagen">
+        <img src="images/imagenes_QuienesSomos/joel-filipe-RFDP7_80v5A-unsplash.jpg" alt="Intersección urbana con tráfico y peatones">
+      </div>
+      <div class="imagen">
+        <img src="images/imagenes_QuienesSomos/mikita-yo-7OwUpvntk_I-unsplash.jpg" alt="Vista panorámica de una ciudad al atardecer">
+      </div>
+    </section>
+
+    <section>
+      <h2>Nuestra Misión</h2>
+      <p>Nos dedicamos a crear entornos urbanos funcionales, estéticos y sostenibles que mejoren la calidad de vida de las personas y promuevan la inclusión social.</p>
+    </section>
+    <section>
+      <h2>Nuestra Visión</h2>
+      <p>Nuestra visión es ser líderes en el diseño urbano, reconocidos por nuestra excelencia, innovación y compromiso con la sostenibilidad, contribuyendo a construir ciudades más habitables y equitativas para todos.</p>
+    </section>
+    <section>
+      <h2>Nuestro Equipo</h2>
+      <p>Contamos con un equipo multidisciplinario comprometido con la excelencia en el diseño y la planificación urbana. Colaboramos estrechamente para ofrecer soluciones creativas y eficaces que mejoren la calidad de vida en nuestras ciudades.</p>
+    </section>
+
+  </main>
+
   <footer id="footer">
     <!-- Con el uso de JavaScript, el contenido de este footer se carga 
     desde un archivo externo (footer.html) -->
   </footer>
+
+  <!-- script para llamar a las funciones de JavaScript del archivo script.js-->
+  <script src="js/script.js"></script> 
+
 </body>
-<!-- script para llamar a las funciones de JavaScript del archivo script.js-->
-<script src="js/script.js"></script> 
+
 </html>
+
+

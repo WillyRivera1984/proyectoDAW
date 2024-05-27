@@ -108,6 +108,35 @@ footer .logo-ues-footer {
   margin-left: auto;               /* Empuja la imagen hacia la derecha */
   width: 20%;
 }
+.redes-sociales-footer {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.redes-sociales-footer a {
+  margin-right: 10px;
+}
+
+.redes-sociales-footer img {
+  width: 24px; /* Ajusta el tamaño según sea necesario */
+  height: auto;
+}
+
+
+.redes-sociales-footer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.redes-sociales-footer a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.redes-sociales-footer img {
+  width: 24px; /* Ajusta el tamaño según sea necesario */
+  height: auto;
+}
 
 /* Clases */
 
@@ -174,7 +203,22 @@ figcaption {
 
 
 /* Selectores Pagina de Quiénes somos */
+/* Galería de imágenes */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
 
+.imagen img {
+  width: 250px; /* Establecer el ancho deseado */
+  height: 200px; /* Establecer la altura deseada */
+}
+
+.imagen img:hover {
+  transform: none; 
+  transition-duration: 0s; 
+}
 
 /* Selectores Pagina de Servicios */
 
