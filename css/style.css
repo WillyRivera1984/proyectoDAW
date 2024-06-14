@@ -4,16 +4,19 @@
 
 /* Selectores Pagina de Inicio*/
 /* General: todos los elementos dentro del html */
-*{
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
+} 
 
 body {
   font-family: 'Roboto';
   font-size: 15px;
   color: black;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   margin-top: 150px; /* Igual a la altura del header */
+  justify-content: center;
 }
 
 main {
@@ -84,11 +87,22 @@ header .container nav a.active {
 /* Footer */
 
 footer {
+  width: 100%; /* Asegura que el footer ocupe todo el ancho disponible */
+  background-color: white; /* Color de fondo del footer */
+  color: #fff; /* Color del texto del footer */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 20px 0; /* Espaciado interno del footer */
+  padding-top: 40px;
+  margin-top: auto;
+}
+/*
+footer {
   background-color: white;
   color: white;
   padding-top: 40px;
+  margin-top: auto;
 }
-
+*/
 footer .barra-footer {
   background-color: #b47f31;
   text-align: center;
@@ -108,36 +122,26 @@ footer .logo-ues-footer {
   margin-left: auto;               /* Empuja la imagen hacia la derecha */
   width: 20%;
 }
+
 .redes-sociales-footer {
   display: flex;
-  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 
 .redes-sociales-footer a {
-  margin-right: 10px;
-}
-
-.redes-sociales-footer img {
-  width: 24px; /* Ajusta el tamaño según sea necesario */
-  height: auto;
-}
-
-
-.redes-sociales-footer {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.redes-sociales-footer a {
-  margin: 0 10px;
   display: inline-block;
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
 }
 
-.redes-sociales-footer img {
-  width: 24px; /* Ajusta el tamaño según sea necesario */
-  height: auto;
+.redes-sociales-footer a:hover {
+  transform: scale(1.2); /* Aumentar el tamaño al pasar el mouse */
 }
 
+ 
 /* Clases */
 
 .container {
@@ -281,3 +285,200 @@ figcaption {
 
 
 /* Selectores Pagina de Contacto */
+.Contact-contenido {
+  background-color: #fff;
+  padding: 30px;
+  padding-left: 50px;
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.titleContactUS, h3 {
+  text-align: left;
+  color: #333;
+  padding: 20px;
+
+}
+/* Estilo para la tabla */
+.imgTable:first-child {
+  flex: 2;
+  padding: 10xp;
+  background-color: #fff;
+  margin: 20px;
+  margin-bottom: 0;
+}
+.tableContactos {
+  padding: 25xp;
+  background-color: #fff;
+  margin: 20px;
+  margin-bottom: 0;
+  width: 100%; /* Opcional: para que la tabla ocupe todo el ancho */
+  border-collapse: collapse; /* Colapsar los bordes de la tabla */
+}
+
+/* Estilo para las celdas de encabezado (th) */
+th {
+  background-color: #fff; /* Color de fondo */
+  border: 0px solid #ddd; /* Borde de 1 píxel sólido */
+  padding: 5px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Estilo para las celdas de datos (td) */
+td {
+  border: 0px solid #ddd; /* Borde de 1 píxel sólido */
+  padding: 5px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+}
+/* Estilos iniciales del icono */
+.icon {
+  font-size: 24px;
+  color: #333;
+  transition: transform 0.3s ease; /* Transición suave para la animación */
+}
+
+/* Definición de la animación con @keyframes */
+.icon:hover {
+  transform: scale(1.2); /* Escala el icono al hacer hover */
+}
+
+/*FORMULARIO*/
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+}
+
+.form-group { 
+  background: #ffffff;
+  background-position: center;
+  padding: 40px;
+  width: 1000px;
+  border-radius: 10px;
+  border-color: #b47f31;
+  border-top: 8px;
+}
+.form-y-btn {
+  flex: 1;
+  min-width: 250px;
+}
+
+.imagenContact {
+  border-color: white;
+}
+.form-group h2{
+  color: #c0c0c0;
+  font-size: 20px;
+  margin-bottom: 10px;
+  position: flex;
+}
+
+p{
+  color: #242323c2;
+  font-size: 17px;
+  margin-bottom: 10x;
+  position: flex;
+  padding: 10px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+label{
+  font-size: 14px;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 15px;
+}
+
+input, textarea{
+  padding: 15px 10px;
+  background-color: #f0f0f0;
+  border: 0;
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+:focus{
+  outline: 1px solid #b47f31;
+}
+
+.btnEnviar {
+  background-color: #b47f31;
+  width: 100px;
+  align-self: flex-end;
+  cursor: pointer;
+  /*height: 40px;*/
+}
+
+.btnEnviar:hover{
+  background-color: #da9b3c;
+  font-style: normal;
+}
+
+.btnWA {
+  background-color: #fffefd;
+  width: 200px;
+  align-self: flex-end;
+  cursor: pointer;
+  border: #b47f31;
+  border: 1px solid #ccc; /* Agrega un borde gris */
+  border-radius: 10px;
+  height: 40px;
+}
+
+.btnWA:hover{
+  background-color: #dba268;
+  font-style: normal;
+}
+.WhatsApp {
+  display: flex;
+  justify-content: center;
+}
+
+.containerContact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto 0 auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+}
+.imagenContact{
+  display: flex;
+  justify-content: center;
+}
+
+.half {
+  width: 48%; /* Ajusta el tamaño de los contenedores */
+}
+
+@media (max-width: 991px) {
+  body{
+    padding: 10px;
+  }
+  .form-group{
+    width: 100%;
+  }
+  form{
+    width: 100%;
+  }
+  .imagenContact {
+    display: none;
+  }
+  .containerContact {
+    flex-direction: column; /* En pantallas pequeñas, cambia a una columna */
+  }
+  .half {
+    width: 100%; /* En pantallas pequeñas, ocupa todo el ancho */
+  }
+}

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {  
 
   // JavaScript para cargar el head
   fetch('partials/head.html')
