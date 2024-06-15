@@ -18,11 +18,14 @@
         <div class="half">
           <!-- Formulario y Botón de WhatsApp -->
           <div class="form-y-btn">
+
             <div class="WhatsApp">
               <!-- Botón WhatsApp -->
-              <button type="submit" class="btnWA"><i class="bi bi-whatsapp" style="font-size: 18px; color: limegreen;"></i> Escribenos al WhatsApp</button>
+              <button type="button" class="btnWA" onclick="openWhatsApp()">
+                  <i class="bi bi-whatsapp" style="font-size: 18px; color: limegreen;"></i> Escribenos al WhatsApp
+              </button>
             </div>
-  
+
             <div class="form-group">
               <!-- Formulario de contacto -->
                
@@ -44,7 +47,17 @@
   
                 <input id="button" type="submit" class="btnEnviar" value="Enviar">
               </form>
+              
             </div>
+            <div id="alert-container"></div>
+            <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('3uDLlxkD76J5nJL7J')
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
           </div>
         </div>
   

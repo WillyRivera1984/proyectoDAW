@@ -37,3 +37,70 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+//PARA WHATSAPP
+function openWhatsApp() {
+  var url = "https://wa.me/50376200583?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n.";
+  window.open(url, '_blank');
+}
+// Asignar el evento click al botón al cargar el DOM
+document.addEventListener("DOMContentLoaded", function() {
+  var btnWhatsApp = document.getElementById("btnWhatsApp");
+  btnWhatsApp.addEventListener("click", openWhatsApp);
+});
+
+//PARA ENVIAR LOS CORREOS
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Enviando...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_s7z5u2l';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+        // Acción cuando el envío es exitoso
+        btn.value = 'Enviar'; // Cambiar el valor del botón si es necesario
+        showAlert('success', '¡Mensaje enviado!', 'Nos pondremos en contacto contigo pronto.');
+        // Limpiar los campos del formulario
+        document.getElementById('form').reset();
+    }, (err) => {
+        // Acción cuando hay un error
+        btn.value = 'Enviar'; // Cambiar el valor del botón si es necesario
+        showAlert('danger', 'Error al enviar mensaje', 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
+        console.error('Error al enviar el mensaje:', err); // Mostrar el error en la consola para depuración
+    });
+
+// Función para mostrar alertas utilizando Bootstrap
+function showAlert(type, title, message) {
+    const alertMarkup = `
+        <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+            <strong>${title}</strong> ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    `;
+    // Agregar la alerta al DOM
+    document.getElementById('alert-container').innerHTML = alertMarkup;
+
+    // Cerrar automáticamente la alerta después de 5 segundos
+    setTimeout(function() {
+        document.querySelector('.alert').remove();
+    }, 5000);
+}
+
+   /*emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+        // Acción cuando el envío es exitoso
+        btn.value = 'Enviar'; // Cambiar el valor del botón si es necesario
+        alert('¡Tu mensaje ha sido enviado! Nos pondremos en contacto contigo pronto.');
+    }, (err) => {
+        // Acción cuando hay un error
+        btn.value = 'Enviar'; // Cambiar el valor del botón si es necesario
+        alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
+        console.error('Error al enviar el mensaje:', err); // Mostrar el error en la consola para depuración
+    });
+    */
+});
