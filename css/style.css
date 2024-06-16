@@ -207,21 +207,76 @@ figcaption {
 
 
 /* Selectores Pagina de Quiénes somos */
-/* Galería de imágenes */
+.container-about {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+/* Estilos para la galería de imágenes */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.imagen {
+  overflow: hidden;
+  position: relative;
 }
 
 .imagen img {
-  width: 250px; /* Establecer el ancho deseado */
-  height: 200px; /* Establecer la altura deseada */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
 }
 
 .imagen img:hover {
-  transform: none; 
-  transition-duration: 0s; 
+  transform: scale(1.05);
+}
+
+/* Estilos para la sección de historia */
+.historia {
+  margin-bottom: 30px;
+}
+
+/* Estilos para la misión y visión */
+.mision-vision {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.mision, .vision {
+  flex: 1;
+  background-color: #b47f31;
+  padding: 20px;
+  color: white;
+  box-sizing: border-box;
+}
+.slogan {
+  font-style: italic;
+  color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .mision-vision {
+    flex-direction: column;
+  }
 }
 
 /* Selectores Pagina de Servicios */
